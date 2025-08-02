@@ -26,7 +26,7 @@ function get_ios_id(uri) {
 }
 
 function update_color() {
-    chrome.browserAction.setIcon({ path: "res/images/FF_ext_icon_" + color + ".svg" });
+    chrome.action.setIcon({ path: "res/images/FF_ext_icon_" + color + ".svg" });
 }
 
 function getTab() {
@@ -87,7 +87,7 @@ function get_domain_info(urlStr) {
         color = "orange"
     }
 
-    chrome.browserAction.setIcon({ path: "res/images/FF_ext_icon_" + color + ".svg" });
+    chrome.action.setIcon({ path: "res/images/FF_ext_icon_" + color + ".svg" });
     return { programs: programs, security_txt: security_txt, color: color, last_programs_update: CACHE.last_programs_update, lax: lax }
 }
 

@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "YesWeHack VDP Finder",
-    "version": "1.1.2",
+    "version": "1.1.6",
     "description": "This extension tells if visited sites have vulnerability disclosure programs",
     "homepage_url": "https://github.com/yeswehack/yeswehack_vdp_finder",
 
@@ -28,6 +28,12 @@
     "background": {
         "service_worker": "background-script.js"
     },
+
+    "content_scripts": [{
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["content-script.js"],
+        "run_at": "document_idle"
+    }],
 
     "permissions": [
         "tabs",
